@@ -1,0 +1,20 @@
+{
+    "name": "pcsg/announcements",
+    "type": "oxideshop-module",
+    "license": "GNU GENERAL PUBLIC LICENSE",
+    "extra": {
+        "oxideshop": {
+            "blacklist-filter": [
+            ],
+            "target-directory": "pcsg/announcements"
+        }
+    },
+    "require": {
+        "php": ">=7.0",
+    },
+    "autoload": {
+        "psr-4": {
+            "pcsg\\announcements\\": "../../../source/modules/pcsg/announcements"
+        }
+    }
+}
