@@ -1,6 +1,7 @@
 {
     "name": "pcsg/announcements",
     "type": "oxideshop-module",
+    "version": "1.0.0",
     "license": "GNU GENERAL PUBLIC LICENSE",
     "extra": {
         "oxideshop": {
@@ -10,7 +11,7 @@
         }
     },
     "require": {
-        "php": ">=7.0",
+        "php": ">=7.0"
     },
     "autoload": {
         "psr-4": {

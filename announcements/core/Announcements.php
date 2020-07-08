@@ -1,5 +1,4 @@
 <?php
-
 // GNU GENERAL PUBLIC LICENSE
 //
 //This program is free software;
@@ -9,8 +8,9 @@
 //This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
 //without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 // You should have received a copy of the GNU General Public License along with this program; if not, see <http://www.gnu.org/licenses/>
+namespace pcsg\announcements\core;
 
-class pcsg_announcements extends pcsg_announcements_parent {
+class Announcements extends Announcements_parent {
     public static function addPopForFlow(){
         $oConfig = oxRegistry::getConfig();
         $sqlFile = $oConfig->getModulesDir().'pcsg/announcements/core/oxcontents.sql';

@@ -21,9 +21,9 @@ $sMetadataVersion = '2.0';
  * Module information
  */
 $aModule = array(
-    'id'           => 'announcements',
-    'title'        => 'Announcements',
-    'description'  => array(
+    'id'          => 'announcements',
+    'title'       => 'Announcements',
+    'description' => array(
         'de' => 'Modul für Ankündigungen gegenüber Kunden.',
         'en' => 'Module for announcements to customers.',
     ),
@@ -31,37 +31,37 @@ $aModule = array(
     'author'      => 'Gerd Krause',
     'email'       => 'gerd@pcsg.de',
     'extend'      => array(
-      'oxviewconfig'     => 'pcsg/announcements/core/pcsg_announcements'
+        \OxidEsales\Eshop\Core\ViewConfig::class => \pcsg\announcements\core\Announcements::class
     ),
-   'events'           => array(
-     'onActivate'       => 'od_flow_pop::onActivate',
-     'onDeactivate'     => 'od_flow_pop::onDeactivate'
+    'events'      => array(
+        'onActivate'   => '\pcsg\announcements\core\Events::onActivate',
+        'onDeactivate' => '\pcsg\announcements\core\Events::onDeactivate'
     ),
-    'settings'         => array (
-        array (
-          'group'            => 'popup',
-          'name'             => 'homePop',
-          'type'             => 'bool',
-          'value'            => 'true'
-        ),
-        array (
-          'group'            => 'popup',
-          'name'             => 'openPop',
-          'type'             => 'str',
-          'value'            => '3000'
-        ),
-        array (
-          'group'            => 'popup',
-          'name'             => 'closePop',
-          'type'             => 'str',
-          'value'            => '3000'
-        ),
-    ),
-    'blocks'  => array(
+    'settings'    => array(
         array(
-          'template'	       => 'layout/footer.tpl',
-          'block'		       => 'footer_main',
-          'file'		        => 'Application/views/announcements.tpl'
+            'group' => 'popup',
+            'name'  => 'homePop',
+            'type'  => 'bool',
+            'value' => 'true'
+        ),
+        array(
+            'group' => 'popup',
+            'name'  => 'openPop',
+            'type'  => 'str',
+            'value' => '3000'
+        ),
+        array(
+            'group' => 'popup',
+            'name'  => 'closePop',
+            'type'  => 'str',
+            'value' => '3000'
+        ),
+    ),
+    'blocks'      => array(
+        array(
+            'template' => 'layout/footer.tpl',
+            'block'    => 'footer_main',
+            'file'     => 'Application/views/announcements.tpl'
         )
     )
 );
